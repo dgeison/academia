@@ -19,9 +19,15 @@ routes.post("/instructors", function (req, res) {
   //   return res.send("Prencha o nome do instrutor");
   // }
 
-  const keys = Object.keys(req.body)
+  //["avatar_URL","name","birth","gender","services"]
+  //{"avatar_URL":"http://google.com","name":"Dgeison Peixoto","birth":"2021-02-13","gender":"M","services":""}
+  const keys = Object.keys(req.body);
 
-  return res.send(keys);
+  for (key of keys) {
+    if (req.body[key] == "") return res.send("Please, fill all fields!");
+  }
+
+  return res.send(req.body);
 });
 
 routes.get("/members", function (req, res) {

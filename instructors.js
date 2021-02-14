@@ -16,6 +16,8 @@ exports.post = function (req, res) {
     if (req.body[key] == "") return res.send("Please, fill all fields!");
   }
 
+  req.body.created_at = Date.now()
+
   // []
   data.instructors.push(req.body); // [{...}, {...}]
 

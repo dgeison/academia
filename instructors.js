@@ -19,7 +19,7 @@ exports.post = function (req, res) {
   // []
   data.instructors.push(req.body); // [{...}, {...}]
 
-  fs.writeFile("data.json", JSON.stringify(data), function (err) {
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
     if (err) return res.send("Write file errors!");
 
     return res.redirect("/instructors");

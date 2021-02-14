@@ -1,13 +1,5 @@
 {
   "instructors": [
-    {
-      "id": 1,
-      "avatar_URL": "http://google.com",
-      "name": "Izadora Motta",
-      "birth": 1326844800000,
-      "gender": "F",
-      "services": "Inglês",
-      "created_at": 1613271141931
-    }
+    
   ]
 }

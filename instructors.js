@@ -16,7 +16,10 @@ exports.post = function (req, res) {
     if (req.body[key] == "") return res.send("Please, fill all fields!");
   }
 
+  req.body.birth = Date.parse(req.body.birth)
+
   req.body.created_at = Date.now()
+  req.body.id = data.instructors.length + 1
 
   // []
   data.instructors.push(req.body); // [{...}, {...}]

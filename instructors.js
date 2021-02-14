@@ -6,32 +6,26 @@ exports.post = function (req, res) {
   const keys = Object.keys(req.body);
 
   for (key of keys) {
-    if (req.body[key] == "") return res.send("Please, fill all fields!");
+    if (req.body[key] == "") {
+      return res.send("Please, fill all fields!");
+    }
   }
 
-  req.body.birth = Date.parse(req.body.birth);
-  req.body.created_at = Date.now();
-  req.body.id = Number(data.instructors.length + 1);
+  let { avatar_URL, birth, name, services, gender } = req.body;
 
-  const {
-    avatar_url,
-    birth,
-    created_at,
+  birth = Date.parse(birth);
+  const created_at = Date.now();
+  const id = Number(data.instructors.length + 1);
+
+  data.instructors.push({
     id,
+    avatar_URL,
     name,
+    birth,
     gender,
     services,
-  } = req.body;
-
-  data.instructors.push(
-    avatar_url,
-    birth,
-    created_at,
-    id,
-    name,
-    gender,
-    services
-  );
+    created_at
+  });
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
     if (err) return res.send("Write file errors!");
@@ -40,4 +34,22 @@ exports.post = function (req, res) {
   });
 };
 
+//SHOW
+exports.show = function(req, res){
+    const {id} = req.params
+
+    const foundInstructor = data.instructors.find(function(instructor){
+        return instructor.id == id
+    })
+
+    if(!foundInstructor) return res.send("Instructor not found!")
+}
+
+
+
 // UPDATE
+
+// DICAS
+// req.query.id => PELA ?
+// req.body => PEGA DO FORM
+// req.params.id = /:id = PEGA PELA URL

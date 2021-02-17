@@ -78,14 +78,13 @@ exports.edit = function (req, res) {
 //ATUALIZAR
 exports.put = function (req, res) {
   const { id } = req.body;
-
   let index = 0;
 
   const foundInstructor = data.instructors.find(function (
     instructor,
     foundIndex
   ) {
-    if ((id = instructor.id)) {
+    if (id == instructor.id) {
       index = foundIndex;
       return true;
     }

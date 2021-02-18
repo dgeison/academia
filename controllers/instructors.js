@@ -1,13 +1,15 @@
 const fs = require("fs");
-const data = require("./data.json");
-const { age, date } = require("./utils");
+const data = require("../data.json");
+const { age, date } = require("../utils");
 
-//INDEX
 exports.index = function (req, res) {
   return res.render("instructors/index", { instructors: data.instructors });
 };
 
-// CREATE
+exports.create = function(req, res){
+  return res.render("instructors/create")
+}
+
 exports.post = function (req, res) {
   const keys = Object.keys(req.body);
 
@@ -40,7 +42,6 @@ exports.post = function (req, res) {
   });
 };
 
-//SHOW
 exports.show = function (req, res) {
   const { id } = req.params;
 
@@ -62,7 +63,6 @@ exports.show = function (req, res) {
   return res.render("instructors/show", { instructor });
 };
 
-// EDIT
 exports.edit = function (req, res) {
   const { id } = req.params;
 
@@ -80,7 +80,6 @@ exports.edit = function (req, res) {
   return res.render("instructors/edit", { instructor });
 };
 
-//ATUALIZAR
 exports.put = function (req, res) {
   const { id } = req.body;
   let index = 0;
@@ -113,7 +112,6 @@ exports.put = function (req, res) {
   });
 };
 
-// DELETE
 exports.delete = function (req, res) {
   const { id } = req.body;
   const filteredInstructors = data.instructors.filter(function (instructor) {

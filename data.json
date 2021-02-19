@@ -1,5 +1,28 @@
 {
-  "members": [],
+  "members": [
+    {
+      "avatar_URL": "https://images.unsplash.com/photo-1584863371502-048abf845b07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+      "name": "Dylan Nascimento",
+      "email": "nascimento374nascimento@gmail.com",
+      "birth": 1340150400000,
+      "gender": "M",
+      "blood": "AB0",
+      "weight": "74",
+      "height": "171",
+      "id": 1
+    },
+    {
+      "avatar_URL": "https://images.unsplash.com/photo-1584863371502-048abf845b07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+      "name": "Dylan Nascimento",
+      "email": "nascimento374nascimento@gmail.com",
+      "birth": 1340150400000,
+      "gender": "M",
+      "blood": "AB0",
+      "weight": "74",
+      "height": "171",
+      "id": 2
+    }
+  ],
   "instructors": [
     {
       "id": 1,

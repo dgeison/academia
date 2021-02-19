@@ -18,30 +18,26 @@ exports.post = function (req, res) {
       return res.send("Please, fill all fields!");
     }
   }
-
   
   birth = Date.parse(req.body.birth);
 
-
-
   let id = 1;
+  const lastMember = data.members[data.members.length - 1];
 
-  const lastId = data.members[data.members.length - 1].id;
-
-  if (lastId) {
-    id = lastId + 1;
+  if (lastMember) {
+    id = lastMember.id + 1;
   }
 
   data.members.push({
-    ...req.body,
     id,
+    ...req.body,
     birth,
   });
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
     if (err) return res.send("Write file errors!");
 
-    return res.redirect("/members");
+    return res.redirect(`/members/${id}`);
   });
 };
 

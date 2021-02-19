@@ -12,22 +12,30 @@
                 <div>Membro</div>
                 <div>{{member.name}}</div>
             </div>
+
             <div class="item">
                 <div>Aniversário</div>
                 <div>{{member.birth}}</div>
             </div>
+
             <div class="item">
                 <div>Email</div>
                 <div>{{member.email}}</div>
             </div>
+
             <div class="item">
                 <div>Sexo</div>
                 <div>{{"Masculino" if member.gender == "M" else "Feminino"}}</div>
             </div>
-            
+
             <div class="item">
                 <div>Tipo Sanguíneo</div>
                 <div>{{member.blood}}</div>
+            </div>
+
+            <div class="item">
+                <div>Peso (Kg)</div>
+                <div>{{member.weight}}</div>
             </div>
 
             <div class="item">
@@ -35,10 +43,6 @@
                 <div>{{member.height}}</div>
             </div>
 
-            <div class="item">
-                <div>Peso</div>
-                <div>{{member.weight}}</div>
-            </div>
             <a href="/members/{{member.id}}/edit" class="button">Editar</a>
         </section>
     </div>

@@ -19,20 +19,10 @@ exports.post = function (req, res) {
     }
   }
 
-  let {
-    avatar_URL,
-    name,
-    email,
-    birth,
-    gender,
-    blood,
-    weight,
-    height,
-  } = req.body;
-
-  birth = Date.parse(birth);
-
   
+  birth = Date.parse(req.body.birth);
+
+
 
   let id = 1;
 
@@ -43,13 +33,9 @@ exports.post = function (req, res) {
   }
 
   data.members.push({
+    ...req.body,
     id,
-    avatar_URL,
-    name,
     birth,
-    gender,
-    services,
-    created_at,
   });
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {

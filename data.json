@@ -1,28 +1,5 @@
 {
-  "members": [
-    {
-      "avatar_URL": "https://images.unsplash.com/photo-1584863371502-048abf845b07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
-      "name": "Dylan Nascimento",
-      "email": "nascimento374nascimento@gmail.com",
-      "birth": 1041811200000,
-      "gender": "F",
-      "blood": "O+",
-      "weight": "740",
-      "height": "1719",
-      "id": 1
-    },
-    {
-      "avatar_URL": "https://images.unsplash.com/photo-1584863371502-048abf845b07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
-      "name": "Dylan Nascimento",
-      "email": "nascimento374nascimento@gmail.com",
-      "birth": 1340150400000,
-      "gender": "M",
-      "blood": "AB0",
-      "weight": "74",
-      "height": "171",
-      "id": 2
-    }
-  ],
+  "members": [],
   "instructors": [
     {
       "id": 1,
@@ -32,15 +9,6 @@
       "gender": "M",
       "services": "Musculação, Crossfit, Natação",
       "created_at": 1613272965705
-    },
-    {
-      "id": 2,
-      "avatar_URL": "https://images.unsplash.com/photo-1485178575877-1a13bf489dfe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1291&q=80",
-      "name": "Iara Motta",
-      "birth": -1613260800000,
-      "gender": "F",
-      "services": "Musculação, Crossfit, Natação",
-      "created_at": 1613272970404
     }
   ]
 }

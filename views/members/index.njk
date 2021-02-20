@@ -17,13 +17,13 @@
                 {% for member in members %}
                     <tr>
                         <td>
-                        <span style="background-image: url({{member.avatar_URL}})">
-
-                        </span>{{member.name}}</td>
+                            <span style="background-image: url({{member.avatar_URL}})"></span>{{member.name}}</td>
                         <td>{{member.email}}</td>
-                        <td>{{member.weight}}</td>
-                        <td>{{member.height}}</td>
-                        <td><a href="/members/{{member.id}}">Ver</a></td>
+                        <td>{{member.weight}} kg</td>
+                        <td>{{member.height}} cm</td>
+                        <td>
+                            <a href="/members/{{member.id}}">Ver</a>
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>
